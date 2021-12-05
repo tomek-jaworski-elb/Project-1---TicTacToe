@@ -172,8 +172,17 @@ public class Game {
                 (grid[0][1] == 'o' && grid[1][1] == 'o' && grid[2][1] == 'o') ||
                 (grid[0][2] == 'o' && grid[1][2] == 'o' && grid[2][2] == 'o')) {
             result = "O wins";
+        } else {
+            for (int i = 0; i < 3; i++) {
+                if (grid[0][i] == '-' || grid[1][i] == '-' || grid[2][i] == '-') {
+                    result = "None";
+                } else {
+                    result = "Tie";
+                }
+            }
         }
         return result;
+
     }
 
     /**
